@@ -79,12 +79,13 @@ module "autoscalinggroup" {
   instance_type     = var.instance_type
   security_groups   = module.security_groups.internal_id
   key_name          = var.key_pair_name
-  subnetazs         = module.subnet_public.az
+  #subnetazs         = module.subnet_public.az
   min_size          = var.min_size
   max_size          = var.max_size
   desired_capacity  = var.desired_capacity
   load_balancer_name= module.applicationloadbalancer.alb_id
-  target_group_arn = module.applicationloadbalancer.target_group_arn
+  target_group_arn  = module.applicationloadbalancer.target_group_arn
+  subnet_ids        = module.subnet_public.id
 }
 
 module "snstopics" {
