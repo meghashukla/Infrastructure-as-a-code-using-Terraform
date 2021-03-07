@@ -79,7 +79,7 @@ module "autoscalinggroup" {
   instance_type     = var.instance_type
   security_groups   = module.security_groups.internal_id
   key_name          = var.key_pair_name
-  subnetazs         = module.subnet_public.id
+  subnetazs         = module.subnet_public.az
   min_size          = var.min_size
   max_size          = var.max_size
   desired_capacity  = var.desired_capacity
