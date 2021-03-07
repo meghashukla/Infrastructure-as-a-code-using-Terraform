@@ -3,7 +3,7 @@ resource "aws_subnet" "public" {
   count             = length(var.subnet_az)
   vpc_id            = var.vpc_id
   cidr_block        = element(var.subnet_cidr,count.index)
-  #availability_zone = element(var.subnet_az,count.index)
+  availability_zone = element(var.subnet_az,count.index)
 
   tags = {
         Name = "${var.subnet_name} ${count.index+1}"
