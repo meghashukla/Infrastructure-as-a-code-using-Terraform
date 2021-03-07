@@ -12,7 +12,8 @@ resource "aws_launch_configuration" "asglaunchconfiguration" {
 
 resource "aws_autoscaling_group" "autoscalinggroup" {
   launch_configuration = aws_launch_configuration.asglaunchconfiguration.id
-  availability_zones = var.subnetazs
+  #availability_zones = var.subnetazs
+  vpc_zone_identifier = var.subnet_ids
   min_size = var.min_size
   max_size = var.max_size
   desired_capacity  = var.desired_capacity
