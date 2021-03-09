@@ -12,7 +12,7 @@ EBS volumes are encrypted with kms.
 
 The layout of this looks like following:
 
-![image](https://user-images.githubusercontent.com/31190996/110222873-94024580-7efb-11eb-951c-e386489d2188.png)
+![image](https://user-images.githubusercontent.com/31190996/110502410-2f283480-8121-11eb-9751-a98a74fbf035.png)
 
 ## Why Modules?
 
