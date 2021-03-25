@@ -24,6 +24,7 @@ module "subnet_private" {
   subnet_cidr = var.subnet_private_cidr
   subnet_name = var.subnet_private
   subnet_az   = var.subnet_private_az
+  publicsubnet = element(module.subnet_public.id,2)
 }
 
 module "security_groups" {
