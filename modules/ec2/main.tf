@@ -1,5 +1,7 @@
 resource "aws_instance" "web" {
+
   subnet_id     = element(var.subnet_id,1)
+
   ami           = var.ami
   instance_type = var.instance_type
   vpc_security_group_ids = [var.sg_id]

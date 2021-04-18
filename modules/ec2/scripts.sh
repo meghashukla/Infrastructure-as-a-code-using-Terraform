@@ -9,3 +9,4 @@ sudo chmod 2775 /var/www
 find /var/www -type d -exec chmod 2775 {} \;
 find /var/www -type f -exec chmod 0664 {} \;
 echo "<html><h1><b>Your website is ready to be hosted now</b></h1></html>" > /var/www/html/index.html
+

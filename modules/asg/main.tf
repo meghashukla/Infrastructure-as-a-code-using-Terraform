@@ -1,7 +1,9 @@
 resource "aws_ami_from_instance" "ec2instanceimage" {
+
   name               = "${var.instance_name}-ami6"
   source_instance_id =  var.instance_id
  
+
 }
 
 resource "aws_launch_configuration" "asglaunchconfiguration" {
@@ -9,9 +11,11 @@ resource "aws_launch_configuration" "asglaunchconfiguration" {
   instance_type          = var.instance_type
   security_groups        = [var.security_groups]
   key_name               = var.key_name
+
   lifecycle {
     create_before_destroy = true
   }
+
 }
 
 resource "aws_autoscaling_group" "autoscalinggroup" {
@@ -32,8 +36,10 @@ resource "aws_autoscaling_group" "autoscalinggroup" {
 }
 
 resource "aws_autoscaling_policy" "autoscalinggrouppolicy" {
+
   name                   = "asgpolicy"
   scaling_adjustment     = 1
+
   adjustment_type        = "ChangeInCapacity"
   cooldown               = 300
   autoscaling_group_name = aws_autoscaling_group.autoscalinggroup.name

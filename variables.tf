@@ -33,12 +33,16 @@ default     = ["us-east-1a","us-east-1b"]
 
 variable "subnet_private_cidr" {
   description = "CIDR for internal subnet"
+
   default     = ["10.0.128.0/24","10.0.129.0/24"]
+
 }
 
 variable "subnet_private_az" {
 description = "Region for private subnet"
+
 default     = ["us-east-1b","us-east-1a"]
+
 }
 
 variable "sg_internal" {
@@ -80,6 +84,7 @@ variable "numberofvolumes" {
 }
 
 variable "key_pair_name" {
+
   default = "newkeypait"
 }
 

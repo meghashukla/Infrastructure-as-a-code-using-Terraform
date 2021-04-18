@@ -3,7 +3,9 @@ variable instance_id{}
 variable instance_type{}
 variable security_groups{}
 variable key_name{}
+
 #variable subnetazs{}
+
 variable min_size{}
 variable max_size{}
 variable desired_capacity{}
