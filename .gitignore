@@ -1,0 +1,8 @@
+#Local terraform files
+**/.terraform/*
+
+#Override file
+*.tfoverride
+
+.git
+
