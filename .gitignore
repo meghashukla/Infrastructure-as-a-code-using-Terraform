@@ -1,5 +1,7 @@
 #Local terraform files
 **/.terraform/*
+.terraform
+**/.tfstate/*
 
 #Override file
 *.tfoverride
