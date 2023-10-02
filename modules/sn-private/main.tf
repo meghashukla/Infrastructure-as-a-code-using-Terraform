@@ -39,12 +39,10 @@ resource "aws_route" "nat_gateway_route" {
 }
 
 resource "aws_route_table_association" "rt_assn" {
-<<<<<<< HEAD
+
   count          = length(var.subnet_cidr)
   subnet_id      = element(aws_subnet.private.*.id, count.index)
-=======
-  subnet_id      = aws_subnet.private.id
->>>>>>> 2b7f487b1faa15c74323364fa3c355afa4ef1c45
+
   route_table_id = aws_route_table.private_route_table.id
 }
 
