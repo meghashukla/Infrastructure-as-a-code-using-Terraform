@@ -1,0 +1,17 @@
+{
+    "AWSTemplateFormatVersion": "2010-09-09",
+    "Description": "A sample template",
+    "Resources": {
+        "Type": "AWS::ServiceCatalog::CloudFormationProduct",
+        "Properties": {
+            "Name": "samplecatalogforautomation",
+            "Owner": "Megha",
+            "ProductType": "TERRAFORM_OPEN_SOURCE",
+            "ProvisioningArtifactParameters": {
+                "Info": {
+                    "LoadTemplateFromURL": "https://myservicecatalogtest.s3.ap-south-1.amazonaws.com/servicecatalogtest3.tar.gz"
+                }
+            }
+        }
+    }
+}
